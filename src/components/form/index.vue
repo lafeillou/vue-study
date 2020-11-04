@@ -23,12 +23,16 @@ import KInput from "@/components/form/KInput.vue"
 import KFormItem from "@/components/form/KFormItem.vue"
 import KForm from "@/components/form/KForm.vue"
 
+import Notice from "@/components/Notice.vue"
+import { create } from "@/utils/create.js"
+
 export default {
     components: {
         ElementTest,
         KInput,
         KFormItem,
-        KForm
+        KForm,
+        Notice
     },
     data() {
         return {
@@ -48,12 +52,27 @@ export default {
     },
     methods: {
         onLogin() {
+
+           
+
            this.$refs.loginForm.validate(isValid => {
-               if(isValid) {
-                   console.log('submit login')
-               } else {
-                   alert('校验失败')
-               }
+            //    if(isValid) {
+            //        console.log('submit login')
+            //    } else {
+            //        alert('校验失败')
+            //    }
+                // todo 期待用法
+                // this.$notice({
+                //     title: "社会杨哥喊你来搬砖",
+                //     message: isValid ? "请求登录" : "校验失败",
+                //     duration: 1000,
+                // })
+                const notice = create(Notice, {
+                    title: "社会杨哥喊你来搬砖",
+                    message: isValid ? "请求登录" : "校验失败",
+                    duration: 1000,
+                });
+            notice.show();
            }) 
         }
     },
