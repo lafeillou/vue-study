@@ -1,19 +1,32 @@
 <template>
   <div id="app">
+    <!-- <Sidebar></Sidebar> -->
     <div id="nav">
-      <!-- 路由跳转连接 -->
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">
+        <!-- <svg-icon icon-class="denglong"></svg-icon> -->
+        Home
+      </router-link>|
       <router-link to="/about">About</router-link>
-    </div>
+    </div> 
+
     <!-- 路由出口 -->
-    <!-- 利用vue响应式：current -->
-    <router-view/>
+    <router-view />
+
   </div>
 </template>
 
+<script>
+// import Sidebar from "@/components/Sidebar";
+
+export default {
+  components: {
+    // Sidebar
+  }
+};
+</script>
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
+import HelloWorld from '@/components/HelloWorld'
 
 // 1.VueRouter是一个插件？
 // 内部做了什么：
@@ -12,7 +13,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    // component: Home
+    component: HelloWorld
   },
   {
     path: '/about',
