@@ -7,11 +7,14 @@
     <!-- 组件通信 -->
     <!-- <Communication></Communication> -->
     <!-- 表单 -->
-    <FormExample></FormExample>
+    <!-- <FormExample></FormExample> -->
     <!-- 插槽 -->
     <!-- <SlotExample></SlotExample> -->
     <!-- 递归 -->
     <!-- <TreeExample></TreeExample> -->
+
+    <!-- 大作业 表格-->
+    <TableExample></TableExample>
   </div>
 </template>
 
@@ -20,6 +23,8 @@ import Communication from '@/components/communication';
 import FormExample from '@/components/form';
 import SlotExample from '@/components/slots';
 import TreeExample from '@/components/recursion';
+import TableExample from '@/components/table';
+
 
 export default {
   name: 'HelloWorld',
@@ -30,7 +35,8 @@ export default {
     Communication,
     FormExample,
     SlotExample,
-    TreeExample
+    TreeExample,
+    TableExample
   },
 }
 </script>
